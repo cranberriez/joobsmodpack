@@ -231,8 +231,12 @@ section.more-info {
 }
 
 .more-info-content img {
-    max-width: 100%;
+    max-width: 105%;
     height: auto;
+}
+
+.more-info .img-container {
+    position: relative;
 }
 
 .more-info-content h3 {
@@ -255,4 +259,21 @@ section.more-info {
     .more-info-content div {
         width: 100%;
     }
+}
+
+#safety-note {
+    padding: 20px;
+    color: #F0F0F0;
+}
+
+#safety-note h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #729FCF;
+    margin-bottom: 20px;
+}
+
+#safety-note .section-content {
+    text-align: center;
+    color: #F0F0F0;
 }
