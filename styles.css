@@ -65,6 +65,22 @@ body {
     background-color: #729FCF;
     color: #0B132C;
     font-weight: bold;
+    position: relative;
+}
+
+.download::after {
+    content: '44.2 Megabytes';
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 400ms;
+    color: lightslategrey;
+
+    pointer-events: none;
+}
+.download:hover::after {
+    opacity: 1.0;
 }
 
 .buttons button:hover {
