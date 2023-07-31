@@ -7,20 +7,20 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="hero">
+    <section class="hero">
         <img src="pixelart.png" alt="Pixel Art">
         <div>
             <h1>Joob's Pack</h1>
             <p>Modpack created by Jacob for the homies. Download and learn more about the pack below.</p>
             <div class="buttons">
-                <a href="#installation-guide"><button class="download" title="3421 MegaBytes">Download</button></a>
-                <a href="#installation-guide"><button>Install Guide</button></a>
-                <a href="#more-info"><button>More Info</button></a>
+                <a href="#"><button class="download" title="3421 MegaBytes" onclick="smoothScroll('installation-guide')">Download</button></a>
+                <button onclick="smoothScroll('installation-guide')">Install Guide</button>
+                <button onclick="smoothScroll('more-info')">More Info</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="installation-guide" id="installation-guide">
+    <section class="installation-guide" id="installation-guide">
         <h2>Installation Guide</h2>
         <div class="options">
             <div class="option">
@@ -74,18 +74,37 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
     
-    <div class="more-info" id="more-info">
-        <img src="info-background.png" alt="More Information">
-        <div>
-            <h2>More Info</h2>
-            <h3>Title 1</h3>
-            <h3>Title 2</h3>
-            <h3>Title 3</h3>
-            <h3>Title 4</h3>
+    <section class="more-info" id="more-info">
+        <div class="more-info-content">
+            <div>
+                <img src="info-background.png" alt="Background Image">
+            </div>
+            <div>
+                <h2>Pack Details</h2>
+                <br>
+
+                <h3>Loads of Quests</h3>
+                <p>Keep on track and learn new mods with quests designed for both beginners and experienced players.</p>
+                
+                <h3>Embrace Different Classes</h3>
+                <p>Choose your path. Be a wizard, paladin, priest, assassin, warrior, and more with unique spells and abilities.</p>
+                
+                <h3>Advanced Mods</h3>
+                <p>From magic with Botania and Mystical Agriculture to technology with Create and Modern Industrialization, there's something to keep everyone interested.</p>
+
+                <h3>Explore the Universe</h3>
+                <p>Travel to space in rockets or explore new dimensions. The choice is yours.</p>
+
+                <h3>Discover New Dimensions</h3>
+                <p>Explore the Deep Dark and open the portal to a new world.</p>
+
+                <h3>Reworked Terrain and Dimensions</h3>
+                <p>Explore a completely reimagined Overworld, Nether, and End with new structures and challenging dungeons to conquer. With a beautiful scenery to boot!</p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="copyright">Copyright &copy; 2023 Jacob</div>
