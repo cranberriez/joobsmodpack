@@ -54,15 +54,17 @@ body {
     border: 2px solid #729FCF;
     background-color: transparent;
     color: #729FCF;
-    padding: 10px 20px;
+    padding: 15px 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     white-space: nowrap;
+    font-size: 18px;
 }
 
 .buttons button.download {
     background-color: #729FCF;
-    color: #F0F0F0;
+    color: #0B132C;
+    font-weight: bold;
 }
 
 .buttons button:hover {
@@ -77,6 +79,11 @@ body {
     justify-content: center;
     width: 100%;
     padding: 20px;
+}
+
+.installation-guide h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .options {
@@ -95,13 +102,84 @@ body {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
-    .hero {
+.option h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.option h4 {
+    color: #FF7F50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;;
+}
+
+.option ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.option li {
+    margin-bottom: 20px;
+}
+
+.option p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #F0F0F0;
+    margin-bottom: 10px;
+}
+
+.option img {
+    width: 100%;
+    height: auto;
+}
+
+#memory-settings li div {
+    width: 80px;
+    display: inline-block;
+}
+
+.more-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20
+}
+
+a:link {
+    color: #FF7F50;
+}
+
+a:visited {
+    color: #4873A6;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+}
+
+.copyright {
+    text-align: left;
+}
+
+.ai-credit {
+    text-align: right;
+}
+
+@media (max-width: 1108px) {
+    .options {
         flex-direction: column;
     }
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
+    .option {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
