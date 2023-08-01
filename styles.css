@@ -283,9 +283,42 @@ section.more-info {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #gallery-image {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 500ms ease-in-out;
+}
+
+.carousel-control {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    bottom: 5%;
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.3);
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.image-pane:hover .carousel-control {
+    opacity: 1;
 }

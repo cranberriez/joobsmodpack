@@ -6,8 +6,12 @@ function smoothScroll(id) {
 
 const imageGallery = document.getElementById('image-gallery');
 const galleryImage = document.getElementById('gallery-image');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
 let imageIndex = 0;
 let imagesLoaded = 0;
+let imageChangeTimeout;
 
 const images = [
   './gallery/ad-astra.png',
@@ -43,15 +47,35 @@ const preloadImages = (srcs, allImagesLoaded) => {
 };
 
 preloadImages(images, () => {
-  galleryImage.src = images[0];
-  setInterval(nextImage, 10000); // rotate images every 3 seconds
+    galleryImage.src = images[0];
+    startImageChangeTimeout();
 });
 
-const nextImage = () => {
-  imageIndex = (imageIndex + 1) % images.length;
-  galleryImage.style.opacity = 0;
-  setTimeout(() => {
-    galleryImage.src = images[imageIndex];
-    galleryImage.style.opacity = 1;
-  }, 1000);
+const startImageChangeTimeout = () => {
+    if (imageChangeTimeout) clearTimeout(imageChangeTimeout);
+    imageChangeTimeout = setTimeout(nextImage, 10000); // rotate images every 10 seconds
 };
+  
+
+const nextImage = () => {
+    imageIndex = (imageIndex + 1) % images.length;
+    changeImage();
+};
+  
+const prevImage = () => {
+    imageIndex = (imageIndex - 1 + images.length) % images.length;
+    changeImage();
+};
+  
+const changeImage = () => {
+    clearTimeout(imageChangeTimeout);
+    galleryImage.style.opacity = 0;
+    setTimeout(() => {
+      galleryImage.src = images[imageIndex];
+      galleryImage.style.opacity = 1;
+      startImageChangeTimeout();
+    }, 400); // Timeout between image fading and next image appearing
+};
+  
+prevButton.onclick = prevImage;
+nextButton.onclick = nextImage;
