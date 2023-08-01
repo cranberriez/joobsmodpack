@@ -90,6 +90,117 @@ body {
     opacity: 1.0;
 }
 
+
+/* Download Section */
+#downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+#downloads h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.download-pane {
+    display: flex;
+    gap: 50px;
+    width: 90%;
+    max-width: 1500px;
+    justify-content: center;
+}
+
+.download-option {
+    background-color: #1C2331;
+    color: #F0F0F0;
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-option.lite {
+    border: 2px solid #729FCF;
+}
+
+.download-option h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.download-option p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #F0F0F0;
+    margin-bottom: 20px; /* More spacing */
+    letter-spacing: 0.05em;
+}
+
+.download-option button {
+    border: 2px solid #729FCF;
+    background-color: transparent;
+    color: #729FCF;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 20px; /* Bigger text */
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.download-option button:hover {
+    background-color: #729FCF;
+    color: #F0F0F0;
+}
+
+.download-option button::after {
+    color: lightslategrey;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 400ms;
+    bottom: -26px;
+}
+
+.download-option button:hover::after {
+    opacity: 1.0;
+}
+
+#full-download::after {
+    content: '44.2 MB';
+}
+
+#lite-download::after {
+    content: '4.2 MB';
+}
+
+#server-download::after {
+    content: '144.2 MB';
+}
+
+.download-option p.highlighted {
+    color: #729FCF;
+}
+
+@media (max-width: 1108px) {
+    .download-pane {
+        flex-direction: column;
+    }
+
+    .download-option {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Download Section */
+
 /* Installation guide */
 .installation-guide {
     align-items: center;
@@ -98,6 +209,7 @@ body {
     justify-content: center;
     padding: 20px;
     width: 100%;
+    margin-top: 15vh;
 }
 
 .installation-guide h2 {
@@ -318,6 +430,10 @@ section.more-info {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .hero-text {
+        text-align: center;
     }
 
     .hero img, .hero div {

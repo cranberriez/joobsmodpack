@@ -11,13 +11,35 @@
 <body>
     <section class="hero">
         <img src="pixelart.png" alt="Pixel Art">
-        <div>
+        <div class="hero-text">
             <h1>Joob's Pack</h1>
             <p>Modpack created by Jacob for the homies. Download and learn more about the pack below.</p>
             <div class="buttons">
                 <a href="#"><button class="download" onclick="smoothScroll('installation-guide')">Download</button></a>
                 <button onclick="smoothScroll('installation-guide')">Install Guide</button>
                 <button onclick="smoothScroll('more-info')">Pack Info</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads">
+        <h2>Downloads</h2>
+        <div class="download-pane">
+            <div class="download-option" style="pointer-events: none; opacity: 0.5;">
+                <h3>Full</h3>
+                <button class="download-button" id="full-download">Download</button>
+                <p>The full version of the mod, including all features and content. Suitable for single player and lan worlds.</p>
+            </div>
+            <div class="download-option lite">
+                <h3>Lite</h3>
+                <button class="download-button" id="lite-download">Download</button>
+                <p>A lightweight version of the mod, with some mods not required for the client stripped away.</p>
+                <p class="highlighted">Recommended for playing on servers!</p>
+            </div>
+            <div class="download-option" style="pointer-events: none; opacity: 0.5;">
+                <h3>Server</h3>
+                <button class="download-button" id="server-download">Download</button>
+                <p>A compiled server pack for running dedicated servers. This is currently not finished so don't expect any stability.</p>
             </div>
         </div>
     </section>
