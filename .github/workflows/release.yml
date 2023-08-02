@@ -15,7 +15,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: Instances/ JoobsPack-Lite.zip
+          files: Instances/JoobsPack-Lite.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: cranberriez/joobsmodpack
