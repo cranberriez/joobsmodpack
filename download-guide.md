@@ -1,6 +1,6 @@
 # Joobs Modpack
 
-Joobs Modpack is available in three versions: Lite, Normal and Server. Each of these versions caters to different needs and system requirements.
+Joobs Modpack is available in three versions: Lite, Normal and Server. Each of these versions caters to different needs.
 
 ## Lite
 

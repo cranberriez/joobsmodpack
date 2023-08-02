@@ -75,21 +75,6 @@ body {
     color: #F0F0F0;
 }
 
-.download::after {
-    color: lightslategrey;
-    content: '44.2 Megabytes';
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    transition: opacity 400ms;
-    bottom: -26px;
-}
-
-.download:hover::after {
-    opacity: 1.0;
-}
-
 
 /* Download Section */
 #downloads {
@@ -174,15 +159,15 @@ body {
 }
 
 #full-download::after {
-    content: '44.2 MB';
+    content: '~ MB';
 }
 
 #lite-download::after {
-    content: '4.2 MB';
+    content: '65.0 MB';
 }
 
 #server-download::after {
-    content: '144.2 MB';
+    content: '~ MB';
 }
 
 .download-option p.highlighted {
