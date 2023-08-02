@@ -11,11 +11,18 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
-      - name: Uploade Zip File
+        
+      - name: Upload Zip File
         uses: actions/upload-artifact@v3
         with:
           name: release-artifact
           path: Instances/JoobsPack-Lite.zip
+
+      - name: Grab Zip File For Release
+        uses: actions/download-artifact@v3
+          with:
+            name: release-artifact
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -26,6 +33,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
