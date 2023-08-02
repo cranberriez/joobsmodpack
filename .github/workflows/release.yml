@@ -18,6 +18,11 @@ jobs:
           name: release-artifact
           path: Instances/JoobsPack-Lite.zip
 
+      - name: Grab Zip File For Release
+        uses: actions/download-artifact@v3
+        with:
+          name: release-artifact
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -36,6 +41,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./release-artifact.zip
+          asset_path: ${{ github.workspace }}release-artifact.zip
           asset_name: JoobsPack-Lite.zip
           asset_content_type: application/zip
