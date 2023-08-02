@@ -163,7 +163,7 @@ body {
 }
 
 #lite-download::after {
-    content: '65.0 MB';
+    content: '65.1 MB';
 }
 
 #server-download::after {
