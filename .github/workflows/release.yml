@@ -18,11 +18,6 @@ jobs:
           name: release-artifact
           path: Instances/JoobsPack-Lite.zip
 
-      - name: Grab Zip File For Release
-        uses: actions/download-artifact@v3
-          with:
-            name: release-artifact
-
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
