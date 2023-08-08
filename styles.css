@@ -205,12 +205,36 @@ body {
     margin-bottom: 20px;
 }
 
+.button-container {
+    width: 60%;
+    display: flex;
+}
+
+.toggle-button {
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 1px solid #1C2331;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    transition: background-color 0.3s;
+    width: 50%;
+}
+
+.toggle-button.active {
+    background-color: #1C2331;
+}
+
+.installation-guide {
+    width: 100%;
+}
+
 .options {
     display: flex;
-    gap: 50px;
-    justify-content: center;
+    align-items: center;
     max-width: 1500px;
     width: 90%;
+    flex-direction: column;
 }
 
 .option {
@@ -218,19 +242,20 @@ body {
     border-radius: 5px;
     color: #F0F0F0;
     padding: 20px;
-    width: 45%;
+    width: 60%;
 }
 
 .option h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 40px;
+    line-height: 1.2em;
 }
 
 .option h4 {
     color: #FF7F50;
     font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .option li {
@@ -241,7 +266,7 @@ body {
 .option p {
     color: #F0F0F0;
     font-size: 18px;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em;
     line-height: 1.6;
     margin-bottom: 10px;
 }
@@ -249,6 +274,7 @@ body {
 .option img {
     height: auto;
     width: 100%;
+    max-width: 500px;
 }
 
 .option p img {

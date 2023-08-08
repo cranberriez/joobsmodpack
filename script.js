@@ -79,3 +79,17 @@ const changeImage = () => {
   
 prevButton.onclick = prevImage;
 nextButton.onclick = nextImage;
+
+document.getElementById('curseforge-button').addEventListener('click', function() {
+    document.querySelector('.curseforge-option').style.display = 'block';
+    document.querySelector('.alternative-option').style.display = 'none';
+    this.classList.add('active');
+    document.getElementById('alternative-button').classList.remove('active');
+});
+
+document.getElementById('alternative-button').addEventListener('click', function() {
+    document.querySelector('.curseforge-option').style.display = 'none';
+    document.querySelector('.alternative-option').style.display = 'block';
+    this.classList.add('active');
+    document.getElementById('curseforge-button').classList.remove('active');
+});
