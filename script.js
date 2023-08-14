@@ -81,15 +81,45 @@ prevButton.onclick = prevImage;
 nextButton.onclick = nextImage;
 
 document.getElementById('curseforge-button').addEventListener('click', function() {
-    document.querySelector('.curseforge-option').style.display = 'block';
-    document.querySelector('.alternative-option').style.display = 'none';
+    hideInstallOptions()
+    showOption('.curseforge-option')
     this.classList.add('active');
-    document.getElementById('alternative-button').classList.remove('active');
 });
 
 document.getElementById('alternative-button').addEventListener('click', function() {
-    document.querySelector('.curseforge-option').style.display = 'none';
-    document.querySelector('.alternative-option').style.display = 'block';
+    hideInstallOptions()
+    showOption('.alternative-option')
     this.classList.add('active');
-    document.getElementById('curseforge-button').classList.remove('active');
 });
+
+document.getElementById('curseforgeManual-button').addEventListener('click', function() {
+    hideInstallOptions()
+    showOption('.curseforgeManual-option')
+    this.classList.add('active');
+});
+
+function hideInstallOptions() {
+    let options = [
+        document.querySelector('.alternative-option'),
+        document.querySelector('.curseforgeManual-option'),
+        document.querySelector('.curseforge-option')
+    ]
+
+    let buttons = [
+        document.getElementById('alternative-button'),
+        document.getElementById('curseforgeManual-button'),
+        document.getElementById('curseforge-button')
+    ]
+
+    options.forEach(e => {
+        e.style.display = 'none'
+    });
+
+    buttons.forEach(e => {
+        e.classList.remove('active');
+    });
+}
+
+function showOption(option) {
+    document.querySelector(option).style.display = 'block'
+}

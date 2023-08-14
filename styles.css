@@ -206,7 +206,7 @@ body {
 }
 
 .button-container {
-    width: 60%;
+    width: 100%;
     display: flex;
 }
 
@@ -218,11 +218,13 @@ body {
     outline: none;
     color: #aaa;
     transition: background-color 0.3s;
-    width: 50%;
+    width: auto;
     font-size: 28px;
     font-weight: light;
     line-height: 1.2em;
     font-family: inherit;
+
+    flex-grow: 1;
 }
 
 .toggle-button.active {
@@ -238,7 +240,7 @@ body {
     display: flex;
     align-items: center;
     max-width: 1500px;
-    width: 90%;
+    width: 60%;
     flex-direction: column;
 }
 
@@ -247,7 +249,7 @@ body {
     border-radius: 5px;
     color: #F0F0F0;
     padding: 20px;
-    width: 60%;
+    width: 100%;
 }
 
 .option h4 {
